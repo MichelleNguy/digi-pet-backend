@@ -1,14 +1,17 @@
 class PetsController < ApplicationController
-  before_action :set_pet, only: [:show, :update, :destroy]
+  before_action :set_pet, only: [:update, :destroy]
 
   # GET /pets
   def index
-    @pets = Pet.all
-
-    render json: @pets
+    if logged_in?
+      @pets = Pet.all
+      render json: @pets
+    else
+      render json: {go_away: true}, status: :unauthorized
+    end
   end
 
-  # GET /pets/1
+  GET /pets/1
   def show
     render json: @pet
   end

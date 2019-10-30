@@ -4,6 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :username
       t.string :password_digest
       t.integer :bank
+      t.integer :last_day
 
       t.timestamps
     end

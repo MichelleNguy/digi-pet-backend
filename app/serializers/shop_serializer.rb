@@ -1,3 +1,3 @@
 class ShopSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :items
 end

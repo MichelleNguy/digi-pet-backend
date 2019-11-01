@@ -2,8 +2,9 @@ class CreateItems < ActiveRecord::Migration[6.0]
   def change
     create_table :items do |t|
       t.string :name
+      t.integer :price
       t.string :category
-      t.boolean :consumable
+      t.boolean :consumable, :null => false, :default => true
       t.string :effect
       t.belongs_to :shop, null: false, foreign_key: true
 

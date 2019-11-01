@@ -1,3 +1,3 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :bank, :pets, :user_items
+  attributes :id, :username, :bank, :pets, :items
 end

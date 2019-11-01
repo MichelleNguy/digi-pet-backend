@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 2019_10_30_182613) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
+    t.integer "price"
     t.string "category"
-    t.boolean "consumable"
+    t.boolean "consumable", default: true, null: false
     t.string "effect"
     t.bigint "shop_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -28,9 +29,9 @@ ActiveRecord::Schema.define(version: 2019_10_30_182613) do
 
   create_table "pets", force: :cascade do |t|
     t.string "name"
-    t.integer "hygiene"
-    t.integer "hunger"
-    t.integer "attention"
+    t.integer "hygiene", default: 0, null: false
+    t.integer "hunger", default: 0, null: false
+    t.integer "attention", default: 0, null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_182613) do
 
   create_table "shops", force: :cascade do |t|
     t.string "name"
+    t.string "description", default: "This is a beautiful shop.", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -55,8 +57,8 @@ ActiveRecord::Schema.define(version: 2019_10_30_182613) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.integer "bank"
-    t.integer "last_day"
+    t.integer "bank", default: 0, null: false
+    t.integer "last_day", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

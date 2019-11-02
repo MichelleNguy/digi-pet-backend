@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_182613) do
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.integer "price"
+    t.string "img_url"
     t.string "category"
     t.boolean "consumable", default: true, null: false
     t.string "effect"

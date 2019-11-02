@@ -11,7 +11,7 @@ class PetsController < ApplicationController
     end
   end
 
-  GET /pets/1
+  #GET /pets/1
   def show
     render json: @pet
   end

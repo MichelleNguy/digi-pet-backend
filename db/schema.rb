@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_182613) do
 
   create_table "pets", force: :cascade do |t|
     t.string "name"
+    t.string "img_url"
     t.integer "hygiene", default: 0, null: false
     t.integer "hunger", default: 0, null: false
     t.integer "attention", default: 0, null: false

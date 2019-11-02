@@ -12,9 +12,11 @@ sam = User.create(username: "Sam", password: "mom", bank: 0, last_day: 30)
 tim = User.create(username: "Tim", password: "mom", bank: 0, last_day: 29)
 kim = User.create(username: "kim", password: "mom", bank: 0, last_day: 30)
 
-pet1 = Pet.create(name: "Blob", hygiene: 50, hunger: 50, attention: 50, user: bob)
-pet2 = Pet.create(name: "Cube", hygiene: 50, hunger: 50, attention: 50, user: bob)
-pet3 = Pet.create(name: "Triangle", hygiene: 50, hunger: 50, attention: 50, user: sam)
+image2 = "https://images-na.ssl-images-amazon.com/images/I/51K90EdgxcL._SX425_.jpg"
+image = "https://images.blogthings.com/thecutemonstertest/monster-5.png"
+pet1 = Pet.create(img_url: image, name: "Blob", hygiene: 50, hunger: 50, attention: 50, user: bob)
+pet2 = Pet.create(img_url: image2, name: "Cube", hygiene: 50, hunger: 50, attention: 50, user: bob)
+pet3 = Pet.create(img_url: image, name: "Triangle", hygiene: 50, hunger: 50, attention: 50, user: sam)
 
 shop1 = Shop.create(name: "The Fruit Snack Stand")
 shop2 = Shop.create(name: "The Vegetable Stand")

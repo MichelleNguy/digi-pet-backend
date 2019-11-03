@@ -16,12 +16,23 @@ class UserItemsController < ApplicationController
   # POST /user_items
   def create
     @user_item = UserItem.new(user_item_params)
-
-    if @user_item.save
+    
+    @user = User.find(params[:user_id])
+    if @user.bank <= params[:price]
+      render json: {poor: true}, status: :unprocessable_entity
+    elsif @user_item.save
+      @user.bank -= params[:price]
+      @user.save
       render json: @user_item, status: :created, location: @user_item
     else
       render json: @user_item.errors, status: :unprocessable_entity
     end
+    
+    # if @user_item.save
+    #   render json: @user_item, status: :created, location: @user_item
+    # else
+    #   render json: @user_item.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /user_items/1

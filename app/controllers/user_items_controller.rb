@@ -18,10 +18,11 @@ class UserItemsController < ApplicationController
     @user_item = UserItem.new(user_item_params)
     
     @user = User.find(params[:user_id])
-    if @user.bank <= params[:price]
+    @item = Item.find(params[:item_id])
+    if @user.bank <= @item.price
       render json: {poor: true}, status: :unprocessable_entity
     elsif @user_item.save
-      @user.bank -= params[:price]
+      @user.bank -= @item.price
       @user.save
       render json: @user_item, status: :created, location: @user_item
     else

@@ -19,12 +19,22 @@ class PetsController < ApplicationController
   # POST /pets
   def create
     @pet = Pet.new(pet_params)
-
-    if @pet.save
-      render json: @pet, status: :created, location: @pet
+    #
+    if logged_in?
+      if @pet.save
+        render json: @pet, status: :created, location: @pet
+      else
+        render json: @pet.errors, status: :unprocessable_entity
+      end
     else
-      render json: @pet.errors, status: :unprocessable_entity
+      render json: {go_away: true}, status: :unauthorized
     end
+    #
+    # if @pet.save
+    #   render json: @pet, status: :created, location: @pet
+    # else
+    #   render json: @pet.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /pets/1

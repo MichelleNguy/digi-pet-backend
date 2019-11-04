@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_182613) do
 
   create_table "shops", force: :cascade do |t|
     t.string "name"
+    t.string "img_url"
     t.string "description", default: "This is a beautiful shop.", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

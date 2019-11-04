@@ -29,12 +29,6 @@ class PetsController < ApplicationController
     else
       render json: {go_away: true}, status: :unauthorized
     end
-    #
-    # if @pet.save
-    #   render json: @pet, status: :created, location: @pet
-    # else
-    #   render json: @pet.errors, status: :unprocessable_entity
-    # end
   end
 
   # PATCH/PUT /pets/1

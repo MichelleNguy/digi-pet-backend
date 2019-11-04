@@ -31,9 +31,9 @@ ActiveRecord::Schema.define(version: 2019_10_30_182613) do
   create_table "pets", force: :cascade do |t|
     t.string "name"
     t.string "img_url"
-    t.integer "hygiene", default: 0, null: false
-    t.integer "hunger", default: 0, null: false
-    t.integer "attention", default: 0, null: false
+    t.integer "hygiene", default: 50, null: false
+    t.integer "hunger", default: 50, null: false
+    t.integer "attention", default: 50, null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

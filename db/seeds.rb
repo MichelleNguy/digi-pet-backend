@@ -27,8 +27,8 @@ shop3 = Shop.create(name: "Couch Hydrant and Yonder")
 fruit_image = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhaCwuey4j2O0NqQqyr6jwdCLHrC8mDHjY5ghcFMb2384CxaFn"
 fruit_image2 = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTvW9jVf39PPTh_4a6nJkMox6N8yucVu5K5zHiiMqsQw7t_ukzJ"
 fruit_image3 = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQCrnbucEAxMX6Mjt-ZsC1SUpsFEPpDzTjoiG_EiByY7JlClzQb"
-apple = Item.create(price: 5,img_url: fruit_image2, name: "apple", effect: '{ "hunger": 5 }', category: "fruit", consumable: true, shop: shop1)
-banana = Item.create(price: 5, img_url: fruit_image, name: "banana", effect: '{ "hunger": 6}', category: "fruit", consumable: true, shop: shop1)
+apple = Item.create(price: 5,img_url: fruit_image, name: "apple", effect: '{ "hunger": 5 }', category: "fruit", consumable: true, shop: shop1)
+banana = Item.create(price: 5, img_url: fruit_image2, name: "banana", effect: '{ "hunger": 6}', category: "fruit", consumable: true, shop: shop1)
 durian = Item.create(price: 10,img_url: fruit_image3, name: "durian", effect: '{ "hunger": -5}', category: "fruit", consumable: true, shop: shop1)
 
 pizza = Item.create(name: "pizza", effect: '{ "hunger": 10 }', category: "vegetable", consumable: true, shop: shop2)

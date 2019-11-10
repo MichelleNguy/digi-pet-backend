@@ -22,7 +22,7 @@ pet3 = Pet.create(img_url: image, name: "Triangle", hygiene: 50, hunger: 50, att
 
 shop1 = Shop.create(name: "The Fruit Snack Stand")
 shop2 = Shop.create(name: "The Vegetable Stand")
-shop3 = Shop.create(name: "Couch Hydrant and Yonder")
+shop3 = Shop.create(name: "The Sports Shop")
 
 
 ## the fruit stand
@@ -77,10 +77,18 @@ Item.create(price: 3,img_url: "/veggies/radishes.png", name: "radishes", effect:
 Item.create(price: 2,img_url: "/veggies/spring-onion.png", name: "spring-onion", effect: '{ "hunger": 5 }', category: "veggie", consumable: true, shop: shop2)
 Item.create(price: 3,img_url: "/veggies/tomato.png", name: "tomato", effect: '{ "hunger": 5 }', category: "veggie", consumable: true, shop: shop2)
 
-
-
-
-
+# the sports shop
+Item.create(price: 3,img_url: "/sports/basketball.png", name: "basketball", effect: '{ "attention": 5, "hygiene": -10 }', category: "sports", consumable: false, shop: shop3)
+Item.create(price: 3,img_url: "/sports/bowling.png", name: "bowling", effect: '{ "attention": 5, "hygiene": -5 }', category: "sports", consumable: false, shop: shop3)
+Item.create(price: 3,img_url: "/sports/football.png", name: "football", effect: '{ "attention": 5, "hygiene": -10 }', category: "sports", consumable: false, shop: shop3)
+Item.create(price: 3,img_url: "/sports/golf.png", name: "golf", effect: '{ "attention": 5, "hygiene": -3 }', category: "sports", consumable: false, shop: shop3)
+Item.create(price: 3,img_url: "/sports/ice-skating.png", name: "ice skate", effect: '{ "attention": 5, "hygiene": -10 }', category: "sports", consumable: false, shop: shop3)
+Item.create(price: 3,img_url: "/sports/ping-pong.png", name: "ping pong", effect: '{ "attention": 20, "hygiene": -20 }', category: "sports", consumable: false, shop: shop3)
+Item.create(price: 3,img_url: "/sports/skateboard.png", name: "skateboard", effect: '{ "attention": 5, "hygiene": -10 }', category: "sports", consumable: false, shop: shop3)
+Item.create(price: 3,img_url: "/sports/skating.png", name: "rollerskate", effect: '{ "attention": 8, "hygiene": -10 }', category: "sports", consumable: false, shop: shop3)
+Item.create(price: 3,img_url: "/sports/stopwatch.png", name: "stopwatch", effect: '{ "attention": 5, "hygiene": -10 }', category: "sports", consumable: false, shop: shop3)
+Item.create(price: 3,img_url: "/sports/trophy.png", name: "trophy", effect: '{ "attention": 5 }', category: "sports", consumable: false, shop: shop3)
+Item.create(price: 3,img_url: "/sports/whistle.png", name: "whistle", effect: '{ "attention": 5 }', category: "sports", consumable: false, shop: shop3)
 
 # banana = Item.create(price: 5, img_url: fruit_image2, name: "banana", effect: '{ "hunger": 6}', category: "fruit", consumable: true, shop: shop1)
 # durian = Item.create(price: 10,img_url: fruit_image3, name: "durian", effect: '{ "hunger": -5}', category: "fruit", consumable: true, shop: shop1)

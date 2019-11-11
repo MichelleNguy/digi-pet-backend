@@ -1,24 +1,21 @@
-# README
+## Digi - Pets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Digi - Pets is a casual game web game, where a player can create pets and care for them after purchasing items at various shops.
 
-Things you may want to cover:
+This is the frontend repo for Digi - Pets, the backend can be found at the following address:
 
-* Ruby version
+https://github.com/MichelleNguy/digi-pet-frontend
 
-* System dependencies
+### Motivation
 
-* Configuration
+Neopets nostgolia.
 
-* Database creation
+### Tech/Frameworks
 
-* Database initialization
++ Ruby on Rails API
++ JWT Auth
++ Active Model Serializer
 
-* How to run the test suite
+### License
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+MIT © Michelle Nguyen

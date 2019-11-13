@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-  before_action :set_pet, only: [:update, :destroy]
+  before_action :set_pet, only: [:show, :update, :destroy]
 
   # GET /pets
   def index

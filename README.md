@@ -10,6 +10,17 @@ https://github.com/MichelleNguy/digi-pet-frontend
 
 Neopets nostgolia.
 
+### Installation
+1. Clone repo and CD into the directory
+2. ```bundle install```
+3. run ```rails db:create``` to create your postgres database
+4. run ```rails db:migrate``` to bring up migrations
+5. run ```rails db:seed``` to seed data for shops and items
+6. run ```rails s``` to start the server
+
+Make sure to checkout the repo for the frontend and follow the installation
+instructions as well.
+
 ### Tech/Frameworks
 
 + Ruby on Rails API

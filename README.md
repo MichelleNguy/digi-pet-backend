@@ -10,6 +10,24 @@ https://github.com/MichelleNguy/digi-pet-frontend
 
 Neopets nostgolia.
 
+### Demo
+
+![gif of digi-pets game demo](./public/demo-gif.gif)
+
+
+#### Video below:
+
+[![Demo video of digit-pets](https://img.youtube.com/vi/UNI6m8VSLF8/0.jpg)](https://www.youtube.com/watch?v=UNI6m8VSLF8 "Digi-pets demo")
+
+### Screenshots
+
+![screenshot of digi-pets web app, showcasing the kennel](./public/screenshots/screenshot_1.png?raw=true "Kennel")
+
+![screenshot of digi-pets web app, showcasing the fruit stand shop and its items](./public/screenshots/screenshot_2.png?raw=true "Fruit Stand Shop")
+
+![screenshot of digi-pets web app, showcasing the create a pet tab](./public/screenshots/screenshot_3.png?raw=true "Create A Pet")
+
+
 ### Installation
 1. Clone repo and CD into the directory
 2. ```bundle install```

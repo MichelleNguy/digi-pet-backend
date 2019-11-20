@@ -4,7 +4,6 @@ class UserItemsController < ApplicationController
   # POST /user_items
   def create
     @user_item = UserItem.new(user_item_params)
-    
     @user = User.find(params[:user_id])
     @item = Item.find(params[:item_id])
     

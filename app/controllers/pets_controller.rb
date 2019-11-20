@@ -19,7 +19,7 @@ class PetsController < ApplicationController
   # POST /pets
   def create
     @pet = Pet.new(pet_params)
-    #
+
     if logged_in?
       if @pet.save
         render json: @pet, status: :created, location: @pet

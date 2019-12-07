@@ -7,7 +7,7 @@ class LoginController < ApplicationController
       user.daily_bonus
       render json: authentication_json(user.id)
     else
-      render json: { errors: [ "No" ] }, status: :unprocessable_entity
+      render json: { errors: [ "Invalid username or password" ] }, status: :unprocessable_entity
     end 
   end
   

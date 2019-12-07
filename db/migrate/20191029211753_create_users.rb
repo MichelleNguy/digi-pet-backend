@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
     create_table :users do |t|
       t.string :username
       t.string :password_digest
-      t.integer :bank, :null => false, :default => 0
+      t.integer :bank, :null => false, :default => 500
       t.integer :last_day, :null => false, :default => 0
 
       t.timestamps

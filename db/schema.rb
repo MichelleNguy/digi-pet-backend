@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_182613) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.integer "bank", default: 0, null: false
+    t.integer "bank", default: 500, null: false
     t.integer "last_day", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

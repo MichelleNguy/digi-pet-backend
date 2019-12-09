@@ -39,12 +39,12 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # This is called before every method in before_action to set the user
     def set_user
       @user = User.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+    # these are the permitted params when creating new users
     def user_params
       params.require(:user).permit(:username, :password)
     end

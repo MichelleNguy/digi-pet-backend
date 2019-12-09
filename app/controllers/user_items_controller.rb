@@ -25,12 +25,10 @@ class UserItemsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_user_item
       @user_item = UserItem.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def user_item_params
       params.require(:user_item).permit(:user_id, :item_id)
     end

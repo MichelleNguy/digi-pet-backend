@@ -4,12 +4,20 @@ class UsersController < ApplicationController
   # GET /users/1
   def show
     user_id = params[:id]
-    if logged_in_user_id == user_id.to_i
-      @user = User.find(params[:id])
-      render json: @user
-    else
-      render json: {go_away: true}, status: :unprocessable_entity
+    
+    if (!logged_in_user_id)
+      return render json: {go_away: true}, status: :unprocessable_entity
     end
+    @user = User.find(params[:id])
+    render json: @user
+
+
+    # if logged_in_user_id == user_id.to_i
+    #   @user = User.find(params[:id])
+    #   render json: @user
+    # else
+    #   render json: {go_away: true}, status: :unprocessable_entity
+    # end
   end
 
   # POST /users

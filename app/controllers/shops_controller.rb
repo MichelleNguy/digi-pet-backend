@@ -24,20 +24,6 @@ class ShopsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /shops/1
-  def update
-    if @shop.update(shop_params)
-      render json: @shop
-    else
-      render json: @shop.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /shops/1
-  def destroy
-    @shop.destroy
-  end
-
   private
     def set_shop
       @shop = Shop.find(params[:id])
